@@ -1,0 +1,20 @@
+{
+	"name": "sqlite3-demo",
+	"version": "0.0.1",
+	"description": "Example app showing use of SQLite3 using the Sequelize ORM",
+	"main": "server.js",
+	"scripts": {
+		"start": "node server.js"
+	},
+	"dependencies": {
+    "express": "^4.12.4",
+    "sqlite3": "*",
+    "sequelize": "*"
+	},
+	"keywords": [
+		"node",
+		"express",
+		"sqlite3"
+	],
+	"license": "MIT"
+}
