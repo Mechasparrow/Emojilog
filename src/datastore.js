@@ -34,7 +34,7 @@ var sequelize = new Sequelize('database', process.env.DB_USER, process.env.DB_PA
 
 function init() {
   
-  let initPromise = new Promise(
+  var initPromise = new Promise(
     
     (resolve, reject) => {
       sequelize.authenticate()
