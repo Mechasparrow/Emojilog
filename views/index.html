@@ -30,36 +30,18 @@
       </header>
       <main class="mdl-layout__content">
         <div class="page-content">
-          
-          <div class = "mdl-grid">
-            <button class="mdl-cell mdl-button mdl-js-button icon">
-              <span class = "icon">🙂</span>
-            </button>
-            <button class="mdl-cell mdl-button mdl-js-button icon">
-              <span class = "icon">😔</span>
-            </button>
-            <button class="mdl-cell mdl-button mdl-js-button icon">
-              <span class = "icon">🙁</span>
-            </button>
+          <div class="mdl-grid" id="app">
+            <button v-on:click="addLog('🙂')" class="mdl-cell mdl-button mdl-js-button icon">
+                        <span class = "icon">🙂</span>
+                      </button>
+            <button v-on:click="addLog('😔')" class="mdl-cell mdl-button mdl-js-button icon">
+                        <span class = "icon">😔</span>
+                      </button>
+            <button v-on:click="addLog('🙁')" class="mdl-cell mdl-button mdl-js-button icon">
+                        <span class = "icon">🙁</span>
+                      </button>
           </div>
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          </div>
+        </div>
       </main>
     </div>
     
