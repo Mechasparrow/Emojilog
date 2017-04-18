@@ -1,0 +1,25 @@
+.spacer {
+  height: 15px;
+  width: 100%;
+  background-color:#004C8B;
+}
+
+.header {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 100%;
+  background-color:#0277BC;
+}
+
+.add-button {
+  padding-bottom: 5em;
+}
+
+.mdl-layout__title {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.icon {
+  font-size: 2.5em;
+}
