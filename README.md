@@ -5,3 +5,6 @@ A simple list app that demonstrates creating and interacting with a SQLite3 data
 
 ## Getting Started
 Remix and specify a username and password for your database by setting `DB_USER` and `DB_PASS` in `.env`.
+
+## Credits
+* Emoji provided free by http://emojione.com

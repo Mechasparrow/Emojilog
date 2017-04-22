@@ -23,3 +23,16 @@
 .icon {
   font-size: 2.5em;
 }
+
+/** Log style **/
+.log {
+  width: 100%;
+}
+
+.log-card {
+  text-align:center;
+  padding: 10px;
+  border: 1px solid grey;
+  margin: 10px;
+  font-size: 3em;
+}
