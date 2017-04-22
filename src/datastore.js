@@ -6,13 +6,7 @@ var express = require('express');
 var Sequelize = require('sequelize');
 var app = express();
 
-// default user list
-var users = [
-      ["John","Hancock"],
-      ["Liz","Smith"],
-      ["Ahmed","Khan"]
-    ];
-var User;
+var Log
 
 
 // setup a new database
@@ -32,6 +26,11 @@ var sequelize = new Sequelize('database', process.env.DB_USER, process.env.DB_PA
 
 // authenticate with the database
 
+function setup() {
+   Log.sync({force:true}); 
+}
+
+
 function init() {
   
   var initPromise = new Promise(
@@ -41,22 +40,18 @@ function init() {
         .then(function(err) {
           console.log('Connection has been established successfully.');
           // define a new table 'users'
-          User = sequelize.define('users', {
-            firstName: {
+          Log = sequelize.define('logs', {
+            emojie: {
               type: Sequelize.STRING
             },
-            lastName: {
-              type: Sequelize.STRING
-            }
           });
-
-          setup();
         
-          resolve (User);
+          resolve (Log);
         
         })
         .catch(function (err) {
           console.log('Unable to connect to the database: ', err);
+          setup();
           reject();
       });
     }
@@ -70,23 +65,8 @@ function init() {
   
 }
 
-
-
-
-// populate table with default users
-function setup(){
-  User.sync({force: true}) // using 'force' it drops the table users if it already exists, and creates a new one
-    .then(function(){
-      // Add the default users to the database
-      for(var i=0; i<users.length; i++){ // loop through all users
-        User.create({ firstName: users[i][0], lastName: users[i][1]}); // create a new entry in the users table
-      }
-    });  
-}
-
 module.exports = {
   
-    init: init,
-    setup: setup
+    init: init
   
 }
