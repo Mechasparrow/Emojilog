@@ -1,10 +1,27 @@
-# SQLite3 with Sequelize
-A simple list app that demonstrates creating and interacting with a SQLite3 database using the Sequelize ORM.
+# emojielog
 
-![](https://cdn.glitch.com/5dd56de5-79af-444e-a17e-bd60230962eb%2FsqliteDBGIF.gif)
+> A Emojie project
 
-## Getting Started
-Remix and specify a username and password for your database by setting `DB_USER` and `DB_PASS` in `.env`.
+## Build Setup
 
-## Credits
-* Emoji provided free by http://emojione.com
+``` bash
+# install dependencies
+npm install
+
+# serve with hot reload at localhost:8080
+npm run dev
+
+# build for production with minification
+npm run build
+
+# build for production and view the bundle analyzer report
+npm run build --report
+
+# run unit tests
+npm run unit
+
+# run all tests
+npm test
+```
+
+For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
