@@ -5,7 +5,16 @@
     </div>
     <div id = "header-main">
       <h2 color = "white">Emojielog</h2>
+
+      <div class="top-left-fab">
+        <a href = "/#/addlog" class="btn-floating btn-large waves-effect waves-light add-btn">
+          <i style = "font-size: 3em;" class="material-icons">add</i>
+        </a>
+      </div>
+
     </div>
+
+
   </div>
 </template>
 
@@ -16,6 +25,17 @@
 </script>
 
 <style scoped>
+  .add-btn {
+    background-color: #AB47BC;
+  }
+
+  .top-left-fab {
+    position: absolute;
+    left: 1.5em;
+    top: 60px;;
+  }
+
+
 
   #header-comp {
     height: 15px;
