@@ -7,15 +7,15 @@
       <div class = "container">
         <div class = "row">
 
-          <div class = "col s4 emojie-option">
+          <div class = "col s4 emojie-option" v-on:click= "addLog('em-smiley')">
             <i class = "waves-effect waves-light medium em em-smiley"></i>
           </div>
 
-          <div class = "col s4 emojie-option">
+          <div class = "col s4 emojie-option" v-on:click= "addLog('em-expressionless')">
             <i class = "waves-effect waves-light medium em em-expressionless"></i>
           </div>
 
-          <div class = "col s4 emojie-option">
+          <div class = "col s4 emojie-option" v-on:click= "addLog('em-angry')">
             <i class = "waves-effect waves-light medium em em-angry"></i>
           </div>
 
@@ -37,7 +37,23 @@
 <script>
 
   export default {
-    name: 'new-emojie'
+    name: 'new-emojie',
+    methods: {
+      addLog: function (emojie) {
+        alert(emojie)
+        console.log('getting ready to add log')
+
+        // TODO Add log add function here
+
+        // STUB
+
+        // ENDTODO
+
+        alert('added to log')
+        window.location = '/#/'
+      }
+    }
+
   }
 
 </script>
