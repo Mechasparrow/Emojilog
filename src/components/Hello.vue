@@ -1,6 +1,13 @@
 <template>
   <div class="hello">
     <my-header></my-header>
+
+    <div class = "log-view">
+      <div v-for = "log in logs" class = "log-card">
+        <h2 class = "log-text">{{log}}</h2>
+      </div>
+    </div>
+
   </div>
 </template>
 
@@ -45,4 +52,25 @@ li {
 a {
   color: #42b983;
 }
+
+.log-card {
+  background-color:white;
+
+  text-align:center;
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  margin-left:auto;
+  margin-right: auto;
+  width: 50rem;
+
+  border-left: 10px solid #AB47BC;
+}
+
+.log-text {
+  padding: 10px;
+}
+
+
 </style>

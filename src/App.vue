@@ -12,6 +12,10 @@ export default {
 
 <style>
 #app {
-  
+
+}
+
+body {
+  background-color: #E0E0E0;
 }
 </style>
