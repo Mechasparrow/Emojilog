@@ -35,6 +35,7 @@
 </template>
 
 <script>
+  import datastore from '@/db/datastore.js'
 
   export default {
     name: 'new-emojie',
@@ -45,7 +46,9 @@
 
         // TODO Add log add function here
 
-        // STUB
+        var emojies = datastore.getAll()
+        emojies.push(emojie)
+        datastore.saveEmojie(emojies)
 
         // ENDTODO
 

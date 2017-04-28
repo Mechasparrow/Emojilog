@@ -6,9 +6,19 @@
 
 <script>
   import Header from './Header.vue'
+  import datastore from '@/db/datastore'
 
   export default {
     name: 'hello',
+    beforeMount: function () {
+      this.logs = datastore.getAll()
+      console.log(this.logs)
+    },
+    data: function () {
+      return {
+        logs: this.logs
+      }
+    },
     components: {
       'my-header': Header
     }
