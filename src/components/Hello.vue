@@ -3,8 +3,11 @@
     <my-header></my-header>
 
     <div class = "log-view">
-      <div v-for = "log in logs" class = "log-card">
-        <h2 class = "log-text">{{log}}</h2>
+      <div v-for = "(log, index) in logs" class = "log-card">
+        <h2 class = "log-text">
+          <span>{{log['date']}} <i class = "em" :class = "log['emojie']" ></i></span>
+          <span v-on:click= "deleteLog(index)"><i class="waves-effect waves-light trash-icon material-icons">delete</i></span>
+        </h2>
       </div>
     </div>
 
@@ -24,6 +27,12 @@
     data: function () {
       return {
         logs: this.logs
+      }
+    },
+    methods: {
+      deleteLog: function (index) {
+        this.logs.splice(index, 1)
+        datastore.saveEmojie(this.logs)
       }
     },
     components: {
@@ -63,14 +72,27 @@ a {
 
   margin-left:auto;
   margin-right: auto;
-  width: 50rem;
+  max-width: 45rem;
 
   border-left: 10px solid #AB47BC;
 }
+
+@media (max-width: 600px) {
+  .log-card {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
 
 .log-text {
   padding: 10px;
 }
 
+.trash-icon {
+  float:right;
+  margin-top: 15px;
+  font-size: 1em;
+}
 
 </style>

@@ -41,18 +41,20 @@
     name: 'new-emojie',
     methods: {
       addLog: function (emojie) {
-        alert(emojie)
         console.log('getting ready to add log')
 
         // TODO Add log add function here
+        var date = new Date()
+        var emojieObj = {
+          'emojie': emojie,
+          'date': (date.getMonth() + 1) + '/' + date.getDate()
+        }
 
         var emojies = datastore.getAll()
-        emojies.push(emojie)
+        emojies.unshift(emojieObj)
         datastore.saveEmojie(emojies)
 
         // ENDTODO
-
-        alert('added to log')
         window.location = '/#/'
       }
     }
