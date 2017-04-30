@@ -4,7 +4,7 @@
 
     </div>
     <div id = "header-main">
-      <h2 color = "white">Emojielog</h2>
+      <h2 color = "white">Emojilog</h2>
 
       <div class="top-left-fab">
         <a href = "/#/addlog" class="btn-floating btn-large waves-effect waves-light add-btn">

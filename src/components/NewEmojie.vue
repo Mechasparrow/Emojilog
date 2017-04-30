@@ -1,6 +1,6 @@
 <template>
   <div id = "emojie-new">
-    <h1 id = "emojie-title">Select a Emojie for today</h1>
+    <h1 id = "emojie-title">Select a Emoji for today</h1>
 
     <div id = "emojie-options">
 
