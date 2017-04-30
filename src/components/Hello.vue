@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <my-header></my-header>
-
+    <p style = "text-align:center"><b>More emoji to come!</b></p>
     <div class = "log-view">
       <div v-for = "(log, index) in logs" class = "log-card">
         <h2 class = "log-text">
