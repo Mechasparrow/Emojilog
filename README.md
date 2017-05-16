@@ -1,6 +1,6 @@
 * Please note that this project has moved to gitlab and is now private. This is an outdated version of the source code.
 
-# emojielog
+# Emojilog
 
 > A Emojie project
 
